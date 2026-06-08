@@ -14,6 +14,9 @@ from pelicanconf import *
 SITEURL = os.environ.get('SITEURL', 'https://jaws-ug-nagasaki.github.io/website')
 RELATIVE_URLS = False
 
+# Discord URL設定（環境変数から読み込み、設定されていない場合はpelicanconf.pyのデフォルト値を使用）
+DISCORD_URL = os.environ.get('DISCORD_URL', DISCORD_URL)
+
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
 CATEGORY_FEED_ATOM = 'feeds/{slug}.atom.xml'
 

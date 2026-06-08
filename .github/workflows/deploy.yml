@@ -38,6 +38,7 @@ jobs:
       - name: Build site
         env:
           SITEURL: 'https://jawsug-nagasaki.sion908.tech'
+          DISCORD_URL: ${{ secrets.DISCORD_URL }}
         run: uv run pelican -s publishconf.py
 
       - name: Upload artifact

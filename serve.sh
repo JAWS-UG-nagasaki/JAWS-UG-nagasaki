@@ -21,7 +21,7 @@ setup() {
 
 build() {
     echo "📦 サイトをビルド中..."
-    uv run pelican content -s pelicanconf.py
+    source .venv/bin/activate && pelican content -s pelicanconf.py
     echo "📁 静的ファイルをコピー中..."
     cp static/favicon.ico output/favicon.ico
     cp static/custom.css output/custom.css

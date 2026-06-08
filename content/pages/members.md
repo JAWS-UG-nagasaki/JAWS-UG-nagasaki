@@ -1,6 +1,8 @@
 Title: メンバー
 Date: 2026-05-23
+Slug: members
 Save_as: members.html
+Status: hidden
 
 # メンバー
 

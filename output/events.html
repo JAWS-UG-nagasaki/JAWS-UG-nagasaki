@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
+    <title>Events - JAWS-UG 長崎</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries,typography"></script>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet"/>
@@ -102,7 +102,6 @@
             },
         }
     </script>
-    {% block extra_head %}{% endblock %}
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             document.querySelectorAll('.discord-link').forEach(function(link) {
@@ -121,7 +120,6 @@
     </script>
 </head>
 <body class="bg-background text-on-background min-h-screen selection:bg-primary-fixed selection:text-on-primary-fixed">
-    {% block header %}
     <header class="bg-surface/80 backdrop-blur-md dark:bg-surface/80 border-b border-outline-variant sticky top-0 z-50">
         <div class="flex justify-between items-center h-16 max-w-container-max mx-auto px-margin-sm md:px-margin-md">
             <div class="font-headline-md text-headline-md font-bold text-on-surface tracking-tight">
@@ -132,7 +130,7 @@
                 <a class="text-on-surface-variant font-medium hover:text-primary transition-colors font-label-mono text-label-mono" href="/about.html">About</a>
                 <a class="text-on-surface-variant font-medium hover:text-primary transition-colors font-label-mono text-label-mono" href="/code-of-conduct.html">Code of Conduct</a>
                 <a class="text-on-surface-variant font-medium hover:text-primary transition-colors font-label-mono text-label-mono" href="/join.html">Join</a>
-                <a class="bg-[#FF9900] text-[#000000] px-4 py-2 font-bold rounded-lg hover:opacity-90 transition-all font-label-mono text-label-mono discord-link" data-discord-url="{{ discord_url }}" href="#" target="_blank">
+                <a class="bg-[#FF9900] text-[#000000] px-4 py-2 font-bold rounded-lg hover:opacity-90 transition-all font-label-mono text-label-mono discord-link" data-discord-url="https://discord.gg/" href="#" target="_blank">
                     Join Discord
                 </a>
             </nav>
@@ -141,13 +139,51 @@
             </button>
         </div>
     </header>
-    {% endblock %}
     
     <main class="max-w-container-max mx-auto px-margin-sm md:px-margin-md">
-        {% block content %}{% endblock %}
+<!-- Hero Section -->
+<div class="mb-margin-lg">
+    <h1 class="font-headline-xl text-headline-xl mb-4">Events</h1>
+    <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+        Connect, learn, and grow with the AWS community in Nagasaki. From deep-dive study sessions to casual lightning talks.
+    </p>
+</div>
+
+<!-- Filter Section -->
+<div class="mb-margin-md sticky top-[72px] bg-background/95 backdrop-blur-sm z-40 py-4 flex flex-wrap items-center gap-3 border-b border-outline-variant/30">
+    <span class="font-label-mono text-label-mono text-on-surface-variant uppercase tracking-wider mr-2">Filter By:</span>
+    <button class="px-4 py-1.5 rounded-full border border-primary text-primary bg-primary-container font-label-mono text-label-mono hover:bg-secondary-container transition-all">All</button>
+    <button class="px-4 py-1.5 rounded-full border border-outline text-on-surface-variant font-label-mono text-label-mono hover:border-primary hover:text-primary transition-all">Study session</button>
+    <button class="px-4 py-1.5 rounded-full border border-outline text-on-surface-variant font-label-mono text-label-mono hover:border-primary hover:text-primary transition-all">LT</button>
+    <button class="px-4 py-1.5 rounded-full border border-outline text-on-surface-variant font-label-mono text-label-mono hover:border-primary hover:text-primary transition-all">Online</button>
+    <button class="px-4 py-1.5 rounded-full border border-outline text-on-surface-variant font-label-mono text-label-mono hover:border-primary hover:text-primary transition-all">Offline</button>
+</div>
+
+<!-- Event List -->
+<div class="space-y-gutter">
+    <article class="grid grid-cols-1 md:grid-cols-12 gap-gutter p-6 rounded-lg bg-surface-container border border-outline-variant hover:border-primary transition-colors group cursor-pointer">
+        <div class="md:col-span-4 aspect-video overflow-hidden rounded border border-outline-variant">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="JAWS-UG長崎 第0回 AWS BuilderCards 体験会 in CO-DEJIMA" src="/static/event/vol0.png"/>
+        </div>
+        <div class="md:col-span-8 flex flex-col justify-center">
+            <div class="flex items-center gap-2 mb-2">
+                <span class="font-label-mono text-label-mono text-on-surface-variant">2026.06.13</span>
+            </div>
+            <h2 class="font-headline-md text-headline-md mb-2 group-hover:text-primary transition-colors">
+                <a href="events/2026/06/2026-06-13-aws-buildercards.html" class="text-inherit hover:text-inherit">JAWS-UG長崎 第0回 AWS BuilderCards 体験会 in CO-DEJIMA</a>
+            </h2>
+            <div class="flex gap-2 mb-4">
+                <span class="font-label-mono text-[12px] px-2 py-0.5 rounded border border-outline-variant text-on-surface-variant">events</span>
+                <span class="font-label-mono text-[12px] px-2 py-0.5 rounded border border-outline-variant text-on-surface-variant">AWS</span>
+            </div>
+            <p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">
+                <p>AWS公式のカードゲームを使って楽しみながらAWSを学ぶ体験型イベント</p>
+            </p>
+        </div>
+    </article>
+</div>
     </main>
     
-    {% block footer %}
     <footer class="bg-surface border-t border-outline-variant mt-margin-lg py-margin-lg">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter max-w-container-max mx-auto px-margin-sm md:px-margin-md text-left">
             <div>
@@ -161,11 +197,10 @@
             <div class="flex flex-wrap gap-x-8 gap-y-4 md:justify-end items-start">
                 <a class="font-label-mono text-label-mono text-on-surface-variant hover:text-primary transition-colors duration-200 focus:ring-2 focus:ring-primary focus:outline-none" href="https://jawsug-nagasaki.connpass.com/" target="_blank">connpass</a>
                 <a class="font-label-mono text-label-mono text-on-surface-variant hover:text-primary transition-colors duration-200 focus:ring-2 focus:ring-primary focus:outline-none" href="https://github.com/jaws-ug-nagasaki/" target="_blank">GitHub</a>
-                <a class="font-label-mono text-label-mono text-on-surface-variant hover:text-primary transition-colors duration-200 focus:ring-2 focus:ring-primary focus:outline-none discord-link" data-discord-url="{{ discord_url }}" href="#" target="_blank">Discord</a>
+                <a class="font-label-mono text-label-mono text-on-surface-variant hover:text-primary transition-colors duration-200 focus:ring-2 focus:ring-primary focus:outline-none discord-link" data-discord-url="https://discord.gg/" href="#" target="_blank">Discord</a>
                 <a class="font-label-mono text-label-mono text-on-surface-variant hover:text-primary transition-colors duration-200 focus:ring-2 focus:ring-primary focus:outline-none" href="/code-of-conduct.html">Code of Conduct</a>
             </div>
         </div>
     </footer>
-    {% endblock %}
 </body>
 </html>

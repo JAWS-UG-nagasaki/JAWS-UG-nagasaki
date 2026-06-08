@@ -1,5 +1,6 @@
 Title: 参加方法
 Date: 2026-04-28
+Slug: join
 Save_as: join.html
 
 # 参加方法

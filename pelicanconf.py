@@ -26,6 +26,14 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
+# Author, Tags, Categoriesページを無効化
+AUTHOR_URL = ''
+AUTHOR_SAVE_AS = ''
+TAG_URL = ''
+TAG_SAVE_AS = ''
+CATEGORY_URL = ''
+CATEGORY_SAVE_AS = ''
+
 # Markdown拡張
 MARKDOWN = {
     'extension_configs': {
@@ -88,8 +96,6 @@ DATE_FORMATS = {
 
 # イベントカテゴリ設定
 DEFAULT_CATEGORY = 'events'
-CATEGORY_URL = 'events/{slug}.html'
-CATEGORY_SAVE_AS = 'events/{slug}.html'
 
 # 記事URL設定
 ARTICLE_URL = 'events/{date:%Y}/{date:%m}/{slug}.html'
@@ -115,7 +121,15 @@ SITEMAP = {
         'articles': 'monthly',
         'indexes': 'daily',
         'pages': 'monthly'
-    }
+    },
+    'exclude': [
+        '/tag/.*',
+        '/category/.*',
+        '/author/.*',
+        '/archive/.*',
+        '/events/events.html',
+        '/members.html'
+    ]
 }
 
 # メンバーYAMLファイルを読み込み
@@ -126,6 +140,10 @@ def load_members():
             return yaml.safe_load(f)
     return {'members': []}
 
+# Discord URL設定（環境変数から読み込み、デフォルトはダミー値）
+DISCORD_URL = _os.environ.get('DISCORD_URL', 'https://discord.gg/')
+
 JINJA_GLOBALS = {
-    'site_members': load_members()['members']
+    'site_members': load_members()['members'],
+    'discord_url': DISCORD_URL
 }

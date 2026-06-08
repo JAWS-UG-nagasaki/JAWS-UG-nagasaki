@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
+    <title>参加方法 - JAWS-UG 長崎</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries,typography"></script>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet"/>
@@ -102,7 +102,63 @@
             },
         }
     </script>
-    {% block extra_head %}{% endblock %}
+<style>
+    .page-content h2 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        color: #e5e2e2;
+        border-bottom: 1px solid #45474b;
+        padding-bottom: 0.5rem;
+    }
+    .page-content h3 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-top: 1.5rem;
+        margin-bottom: 0.75rem;
+        color: #e5e2e2;
+    }
+    .page-content p {
+        margin-bottom: 1rem;
+        line-height: 1.75;
+        color: #c6c6cb;
+    }
+    .page-content ul, .page-content ol {
+        margin-bottom: 1rem;
+        padding-left: 1.5rem;
+        color: #c6c6cb;
+        list-style-type: disc;
+    }
+    .page-content ol {
+        list-style-type: decimal;
+    }
+    .page-content li {
+        margin-bottom: 0.5rem;
+        line-height: 1.6;
+    }
+    .page-content a {
+        color: #c3c6cf;
+        text-decoration: underline;
+    }
+    .page-content a:hover {
+        color: #c3c6cf;
+    }
+    .page-content code {
+        background: #353435;
+        padding: 0.125rem 0.375rem;
+        border-radius: 0.25rem;
+        font-size: 0.875rem;
+        color: #c3c6cf;
+    }
+    .page-content blockquote {
+        border-left: 4px solid #c3c6cf;
+        padding-left: 1rem;
+        margin: 1rem 0;
+        color: #8f9095;
+        font-style: italic;
+    }
+</style>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             document.querySelectorAll('.discord-link').forEach(function(link) {
@@ -121,7 +177,6 @@
     </script>
 </head>
 <body class="bg-background text-on-background min-h-screen selection:bg-primary-fixed selection:text-on-primary-fixed">
-    {% block header %}
     <header class="bg-surface/80 backdrop-blur-md dark:bg-surface/80 border-b border-outline-variant sticky top-0 z-50">
         <div class="flex justify-between items-center h-16 max-w-container-max mx-auto px-margin-sm md:px-margin-md">
             <div class="font-headline-md text-headline-md font-bold text-on-surface tracking-tight">
@@ -132,7 +187,7 @@
                 <a class="text-on-surface-variant font-medium hover:text-primary transition-colors font-label-mono text-label-mono" href="/about.html">About</a>
                 <a class="text-on-surface-variant font-medium hover:text-primary transition-colors font-label-mono text-label-mono" href="/code-of-conduct.html">Code of Conduct</a>
                 <a class="text-on-surface-variant font-medium hover:text-primary transition-colors font-label-mono text-label-mono" href="/join.html">Join</a>
-                <a class="bg-[#FF9900] text-[#000000] px-4 py-2 font-bold rounded-lg hover:opacity-90 transition-all font-label-mono text-label-mono discord-link" data-discord-url="{{ discord_url }}" href="#" target="_blank">
+                <a class="bg-[#FF9900] text-[#000000] px-4 py-2 font-bold rounded-lg hover:opacity-90 transition-all font-label-mono text-label-mono discord-link" data-discord-url="https://discord.gg/" href="#" target="_blank">
                     Join Discord
                 </a>
             </nav>
@@ -141,13 +196,67 @@
             </button>
         </div>
     </header>
-    {% endblock %}
     
     <main class="max-w-container-max mx-auto px-margin-sm md:px-margin-md">
-        {% block content %}{% endblock %}
+<article class="py-margin-lg">
+    <header class="mb-margin-lg">
+        <h1 class="font-headline-xl text-headline-xl mb-4">参加方法</h1>
+        <div class="font-label-mono text-label-mono text-on-surface-variant">
+            2026.04.28
+        </div>
+    </header>
+
+    <div class="page-content max-w-3xl">
+        <h1>参加方法</h1>
+<p>JAWS-UG 長崎への参加方法をご案内します。</p>
+<h2>イベントへの参加</h2>
+<h3>1. connpassで申し込み</h3>
+<p>すべてのイベントは<a href="https://jaws-ug-nagasaki.connpass.com/">connpass</a>で申し込みを受け付けています。</p>
+<ul>
+<li>イベントページから「参加する」ボタンをクリック</li>
+<li>必要事項を入力して申し込み完了</li>
+</ul>
+<h3>2. 当日の流れ</h3>
+<ul>
+<li><strong>開場</strong>: イベント開始30分前から開場</li>
+<li><strong>受付</strong>: 名刺またはconnpassのQRコードで受付</li>
+<li><strong>参加</strong>: 自由に座ってご参加ください</li>
+</ul>
+<h3>3. 持ち物</h3>
+<ul>
+<li>ノートPC（ハンズオンの場合）</li>
+<li>筆記用具</li>
+<li>名刺（任意）</li>
+</ul>
+<h2>初めての方へ</h2>
+<p>初めてのご参加でも安心です！</p>
+<ul>
+<li>初心者の方が多数参加しています</li>
+<li>質問はいつでも歓迎です</li>
+<li>発表の義務はありません（聞くだけでもOK）</li>
+<li>懇親会もありますので、ぜひご参加ください</li>
+</ul>
+<h2>登壇したい方</h2>
+<p>LT（5-10分の短い発表）の登壇者を募集しています。</p>
+<ul>
+<li>テーマ: AWS関連であれば何でもOK</li>
+<li>時間: 5分または10分</li>
+<li>資料: あれば歓迎（なくてもOK）</li>
+</ul>
+<p>興味のある方は運営メンバーまでお声がけください。</p>
+<h2>運営メンバーになりたい方</h2>
+<p>コミュニティの運営に興味のある方は大歓迎です。</p>
+<ul>
+<li>会場手配</li>
+<li>connpass管理</li>
+<li>SNS運用</li>
+<li>その他運営業務</li>
+</ul>
+<p>詳しくはイベントでお気軽にお聞きください。</p>
+    </div>
+</article>
     </main>
     
-    {% block footer %}
     <footer class="bg-surface border-t border-outline-variant mt-margin-lg py-margin-lg">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter max-w-container-max mx-auto px-margin-sm md:px-margin-md text-left">
             <div>
@@ -161,11 +270,10 @@
             <div class="flex flex-wrap gap-x-8 gap-y-4 md:justify-end items-start">
                 <a class="font-label-mono text-label-mono text-on-surface-variant hover:text-primary transition-colors duration-200 focus:ring-2 focus:ring-primary focus:outline-none" href="https://jawsug-nagasaki.connpass.com/" target="_blank">connpass</a>
                 <a class="font-label-mono text-label-mono text-on-surface-variant hover:text-primary transition-colors duration-200 focus:ring-2 focus:ring-primary focus:outline-none" href="https://github.com/jaws-ug-nagasaki/" target="_blank">GitHub</a>
-                <a class="font-label-mono text-label-mono text-on-surface-variant hover:text-primary transition-colors duration-200 focus:ring-2 focus:ring-primary focus:outline-none discord-link" data-discord-url="{{ discord_url }}" href="#" target="_blank">Discord</a>
+                <a class="font-label-mono text-label-mono text-on-surface-variant hover:text-primary transition-colors duration-200 focus:ring-2 focus:ring-primary focus:outline-none discord-link" data-discord-url="https://discord.gg/" href="#" target="_blank">Discord</a>
                 <a class="font-label-mono text-label-mono text-on-surface-variant hover:text-primary transition-colors duration-200 focus:ring-2 focus:ring-primary focus:outline-none" href="/code-of-conduct.html">Code of Conduct</a>
             </div>
         </div>
     </footer>
-    {% endblock %}
 </body>
 </html>

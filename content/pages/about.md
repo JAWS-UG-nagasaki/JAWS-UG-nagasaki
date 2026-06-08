@@ -1,5 +1,6 @@
 Title: JAWS-UGとは
 Date: 2026-04-28
+Slug: about
 Save_as: about.html
 
 # JAWS-UGとは

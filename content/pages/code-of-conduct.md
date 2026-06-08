@@ -1,5 +1,6 @@
 Title: 行動規範
 Date: 2026-05-11
+Slug: code-of-conduct
 Save_as: code-of-conduct.html
 
 # 行動規範
