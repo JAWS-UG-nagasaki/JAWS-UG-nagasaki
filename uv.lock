@@ -62,6 +62,7 @@ dependencies = [
     { name = "markdown" },
     { name = "pelican" },
     { name = "pelican-sitemap" },
+    { name = "pelican-tailwindcss" },
     { name = "pyyaml" },
 ]
 
@@ -70,6 +71,7 @@ requires-dist = [
     { name = "markdown", specifier = "==3.10.2" },
     { name = "pelican", specifier = "==4.11.0" },
     { name = "pelican-sitemap" },
+    { name = "pelican-tailwindcss" },
     { name = "pyyaml" },
 ]
 
@@ -178,12 +180,34 @@ wheels = [
 ]
 
 [[package]]
+name = "pelican-tailwindcss"
+version = "0.4.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "pelican" },
+    { name = "pytailwindcss" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/34/68/85b2436dc1b32006d293b6eba6a0260c518d4a4341be2faef900ecf80269/pelican_tailwindcss-0.4.0.tar.gz", hash = "sha256:401fcf6429d9d2e2637451af4404428340d81e2bda8eda97a47d00f420da3b2d", size = 4683, upload-time = "2025-10-27T11:59:35.645Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/7d/7d/af2bc1c58613c12c78023a70b2e9cf6e7023d1d6c451d4fb55c413ddcf04/pelican_tailwindcss-0.4.0-py3-none-any.whl", hash = "sha256:f2e0c1efb4390ecc666dcb07a45eb92ee1e099b886b28cfd128b28bd61dfd6d3", size = 5669, upload-time = "2025-10-27T11:59:34.231Z" },
+]
+
+[[package]]
 name = "pygments"
 version = "2.18.0"
 source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/8e/62/8336eff65bcbc8e4cb5d05b55faf041285951b6e80f33e2bff2024788f31/pygments-2.18.0.tar.gz", hash = "sha256:786ff802f32e91311bff3889f6e9a86e81505fe99f2735bb6d60ae0c5004f199", size = 4891905, upload-time = "2024-05-04T13:42:02.013Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/f7/3f/01c8b82017c199075f8f788d0d906b9ffbbc5a47dc9918a945e13d5a2bda/pygments-2.18.0-py3-none-any.whl", hash = "sha256:b8e6aca0523f3ab76fee51799c488e38782ac06eafcf95e7ba832985c8e7b13a", size = 1205513, upload-time = "2024-05-04T13:41:57.345Z" },
+]
+
+[[package]]
+name = "pytailwindcss"
+version = "0.3.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/d7/90/b83df1eae67f3f22c59ca3f6df67d7a2591bb27157f04a173bd1f164d3e0/pytailwindcss-0.3.0.tar.gz", hash = "sha256:1f71dd64020aacb40608dfe8725ca441c772016c344f757ccbc74b8b6143027d", size = 5527, upload-time = "2025-10-29T19:13:42.155Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/ca/59/e7b86790c4558cfa0344c424219fe17d371b70273044b9a2d163ce1d3f44/pytailwindcss-0.3.0-py3-none-any.whl", hash = "sha256:a9b770ad3c0a0f40073052bcfe81a060b550fed38af614a472f5aa7bb85fa8aa", size = 7502, upload-time = "2025-10-29T19:13:41.109Z" },
 ]
 
 [[package]]

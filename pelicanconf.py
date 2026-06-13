@@ -76,6 +76,7 @@ STATIC_EXCLUDES = []
 EXTRA_PATH_METADATA = {
     'static/favicon.ico': {'path': 'favicon.ico'},
     'static/custom.css': {'path': 'custom.css'},
+    'static/googled0690c3ab706fd43.html': {'path': 'googled0690c3ab706fd43.html'},
 }
 
 # カスタムCSS
@@ -110,7 +111,12 @@ PAGE_SAVE_AS = '{slug}.html'
 IGNORE_FILES = ['_template.md']
 
 # Sitemapプラグイン設定
-PLUGINS = ['sitemap']
+PLUGINS = ['sitemap', 'tailwindcss']
+
+# Tailwind CSS設定
+TAILWIND = {
+    "version": "3.0.24",
+}
 SITEMAP = {
     'format': 'xml',
     'priorities': {

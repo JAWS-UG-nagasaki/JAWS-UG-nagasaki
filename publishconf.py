@@ -32,7 +32,7 @@ EXTRA_HEAD = """
 """
 
 # Sitemapプラグイン設定（本番環境用）
-PLUGINS = ['sitemap']
+PLUGINS = ['sitemap', 'tailwindcss']
 SITEMAP = {
     'format': 'xml',
     'priorities': {

@@ -8,4 +8,5 @@ dependencies = [
     "markdown==3.10.2",
     "pyyaml",
     "pelican-sitemap",
+    "pelican-tailwindcss",
 ]
