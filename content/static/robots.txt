@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jaws-ug-nagasaki.github.io/website/sitemap.xml

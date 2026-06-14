@@ -46,6 +46,7 @@ jobs:
           cp content/static/favicon.ico output/favicon.ico
           cp content/static/custom.css output/custom.css
           cp content/static/googled0690c3ab706fd43.html output/googled0690c3ab706fd43.html
+          cp content/static/robots.txt output/robots.txt
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
