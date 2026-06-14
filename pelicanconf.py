@@ -70,14 +70,7 @@ DIRECT_TEMPLATES = ['index', 'events']
 
 # 静的ファイル
 STATIC_PATHS = ['images', 'static']
-STATIC_EXCLUDES = []
-
-# 静的ファイルのパス設定
-EXTRA_PATH_METADATA = {
-    'static/favicon.ico': {'path': 'favicon.ico'},
-    'static/custom.css': {'path': 'custom.css'},
-    'static/googled0690c3ab706fd43.html': {'path': 'googled0690c3ab706fd43.html'},
-}
+STATIC_EXCLUDES = ['googled0690c3ab706fd43.html']
 
 # カスタムCSS
 STYLESHEET_URL = '/custom.css'
@@ -108,7 +101,7 @@ PAGE_URL = '{slug}.html'
 PAGE_SAVE_AS = '{slug}.html'
 
 # テンプレートファイルを無視
-IGNORE_FILES = ['_template.md']
+IGNORE_FILES = ['_template.md', 'googled0690c3ab706fd43.html']
 
 # Sitemapプラグイン設定
 PLUGINS = ['sitemap', 'tailwindcss']

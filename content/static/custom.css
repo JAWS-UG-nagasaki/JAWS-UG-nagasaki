@@ -244,3 +244,46 @@ footer {
 .code-of-conduct .emphasis {
   font-weight: 700;
 }
+
+/* 印刷用設定 */
+@media print {
+  /* ナビゲーションを非表示 */
+  header {
+    display: none !important;
+  }
+
+  /* フッターのリンクを非表示（ブランド部分は残す） */
+  footer .flex.flex-wrap {
+    display: none !important;
+  }
+
+  /* 背景色を白に、文字色を黒に */
+  body {
+    background-color: white !important;
+    color: black !important;
+  }
+
+  /* リンクのURLを表示 */
+  a[href]:after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    color: #666;
+  }
+
+  /* 見出し前で改ページを回避 */
+  h2, h3 {
+    page-break-after: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* コードブロック内の改ページを回避 */
+  pre, blockquote {
+    page-break-inside: avoid;
+  }
+
+  /* 印刷時に余計な余白を削除 */
+  .py-margin-lg {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+}
